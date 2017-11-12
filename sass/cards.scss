@@ -1,0 +1,10 @@
+.cards {
+  @include flex(row, center);
+  background-color: #f7f7f7;
+  font-size: 12px;
+  height: 58px;
+
+  span {
+    margin-right: 10px;
+  }
+}

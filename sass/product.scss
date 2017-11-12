@@ -1,0 +1,119 @@
+.product {
+  @include flex(column);
+  background: #fff;
+  color: #373737;
+  overflow: hidden;
+  padding-bottom: 12px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 220px;
+
+  @include media-md {
+    margin-right: 10px;
+  }
+
+  figure {
+    max-width: 100%;
+
+    .product__photo {
+      width: auto;
+      height: 290px;
+    }
+  }
+
+  &__name {
+    font-size: 12px;
+    margin: 10px 0;
+    max-height: 12px;
+    overflow: hidden;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__price {
+    font-size: 22px;
+    margin-bottom: 8px;
+    max-height: 22px;
+    overflow: hidden;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  button {
+    @include primary-button(120px, 30px, 12px);
+    padding-top: 2px;
+
+    &:active {
+      @include primary-button-active();
+    }
+  }
+
+  .sale-copy {
+    display: none;
+  }
+
+  &--for-sale {
+    .sale-copy {
+      background: #4c4c4c;
+      color: #fff;
+      display: block;
+      font-family: $helvetica;
+      font-size: 10px;
+      height: 50px;
+      left: 0px;
+      padding: 5px;
+      position: absolute;
+      text-align: left;
+      text-transform: uppercase;
+      top: 0px;
+      width: 50px;
+
+      &:after {
+        border-color: transparent transparent #fff transparent;
+        border-style: solid;
+        border-width: 0 0 50px 50px;
+        bottom: 0;
+        content: "";
+        height: 0;
+        position: absolute;
+        right: 0;
+        width: 0;
+      }
+    }
+  }
+
+  .shop-it {
+    background: #3d3d3d;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    height: 134px;
+    left: 50%;
+    opacity: 0;
+    padding: 40px 0;
+    position: absolute;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: 97px;
+    transform: translateX(-50%);
+    transition: opacity .2s;
+    width: 134px;
+
+    i {
+      display: inline-block;
+      font-size: 34px;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    .shop-it {
+      opacity: 1;
+      transition: opacity .3s;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.subscribe {
+  background-color: #ededed;
+  color: #6b6b6b;
+  font-size: 12px;
+  margin-bottom: 40px;
+
+  @include media-md {
+    margin-bottom: 30px;
+  }
+
+  .center-container {
+    @include flex();
+  }
+
+  &__form {
+    @include flex(row, flex-start, flex-start);
+    padding: 14px 0 13px;
+
+    label {
+      line-height: 30px;
+      margin-right: 7px;
+    }
+
+    input[type="email"] {
+      border: none;
+      color: #9f9f9f;
+      font-size: 12px;
+      font-style: italic;
+      height: 30px;
+      outline: none;
+      padding: 0 10px;
+      width: 132px;
+    }
+
+    input[type="submit"] {
+      @include primary-button(27px, 27px, 13px);
+    }
+  }
+
+  &__submit {
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      color: #fff;
+      content: "\e80b";
+      font-family: 'lookshop';
+      font-size: 13px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .find-us {
+    @include flex(row, flex-start);
+
+    p {
+      margin-right: 15px;
+    }
+
+    &__social-link {
+      background-color: #f7f7f7;
+      color: #6b6b6b;
+      font-size: 21px;
+      height: 55px;
+      line-height: 55px;
+      text-align: center;
+      transition: color .2s;
+      width: 55px;
+
+      &:nth-child(2n+1) {
+        background-color: transparent;
+      }
+
+      &:hover {
+        color: $color-secondary;
+        transition: color .2s;
+      }
+    }
+  }
+}

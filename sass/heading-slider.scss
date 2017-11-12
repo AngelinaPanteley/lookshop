@@ -1,0 +1,110 @@
+.heading-slider {
+  position: relative;
+
+  .flexslider {
+    border: none;
+    margin: 0 0 7.4rem;
+  }
+
+  .flex-viewport {
+    height: 440px;
+
+    @include media-md {
+      height: 350px;
+    }
+  }
+
+  .slides,
+  .slides li,
+  .slides img {
+    height: 100%;
+    width: auto;
+  }
+
+  .slides img {
+    @include media-md {
+      margin-right: -10vw;
+    }
+
+    @media (max-width: 700px) {
+      margin-right: -22vw;
+    }
+  }
+
+  .slides li {
+    @include flex(row, flex-end);
+    background-color: #f6f3ec;
+  }
+
+  .flex-control-nav {
+    bottom: -4.3rem;
+
+    li {
+      margin: 0 11px;
+
+      a {
+        border-radius: 50%;
+        height: 9px;
+        width: 9px;
+
+        &.flex-active {
+          background-color: $color-base;
+        }
+      }
+    }
+  }
+
+  .flex-direction-nav {
+    a {
+      background-color: #fefefd;
+      color: rgba(0,0,0,0);
+      font-size: 0px;
+      height: 117px;
+      line-height: 117px;
+      opacity: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+
+      &:before {
+        color: #cbcbca;
+        font-family: 'lookshop';
+        font-size: 22px;
+      }
+    }
+
+    a.flex-next {
+      right: 0px;
+
+      &:before {
+        content: '\e80a';
+        margin-right: 5px;
+      }
+    }
+
+    a.flex-prev {
+      left: 0px;
+
+      &:before {
+        content: '\e809';
+        margin-left: 7px;
+      }
+    }
+  }
+
+  .flexslider:hover .flex-direction-nav {
+    .flex-prev {
+      left: 0px;
+      opacity: 0.7;
+    }
+
+    .flex-next {
+      opacity: 0.7;
+      right: 0px;
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+  }
+}

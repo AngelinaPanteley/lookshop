@@ -1,0 +1,128 @@
+.catalog {
+  &__tabs-list {
+    @include flex(row, flex-start);
+  }
+
+  &__tab {
+    height: 47px;
+
+    a {
+      color: #555;
+      display: inline-block;
+      font-size: 15px;
+      height: 100%;
+      line-height: 48px;
+      padding: 0 19px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    &.active {
+      background: $color-base;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    &-inner {
+      background-color: $color-base;
+    }
+  }
+
+  .flexslider {
+    background: transparent;
+    border: none;
+    margin: 0px;
+
+    &:hover {
+      .flex-direction-nav a {
+        left: inherit;
+        opacity: 1;
+        right: inherit;
+      }
+    }
+
+    .slides {
+      padding: 30px;
+
+      li {
+        padding-bottom: 12px;
+      }
+    }
+  }
+
+  .flex-direction-nav {
+    display: flex;
+    height: 47px;
+    position: absolute;
+    right: calc((100vw - 985px)/2);
+    top: -47px;
+    width: 94px;
+
+    @include media-md {
+      right: calc((100vw - 95% - 15px)/2);
+    }
+
+    li {
+      @include flex(row, space-around, flex-end);
+      height: 100%;
+      width: 50%;
+    }
+
+    a {
+      background-color: $color-base;
+      font-size: 0px;
+      height: 100%;
+      left: inherit;
+      opacity: 1;
+      position: relative;
+      right: inherit;
+      text-align: center;
+      top: 0px;
+      width: 100%;
+
+      &.flex-disabled {
+        background-color: #f2f2f2;
+        cursor: default;
+        filter: alpha(opacity=1);
+        opacity: 1 !important;
+        z-index: 1;
+
+        &:before {
+          color: #979797;
+        }
+      }
+
+      &:before {
+        color: #fff;
+        font-family: 'lookshop';
+        font-size: 30px;
+        line-height: 49px;
+      }
+
+      &.flex-next:before {
+        content: '\e80e';
+      }
+
+      &.flex-prev:before {
+        content: '\e80d';
+      }
+    }
+  }
+
+  .flex-control-nav {
+    display: none;
+  }
+
+  .product:hover {
+    box-shadow: 0px 4px 14px 4px rgba(0,0,0,0.3);
+    margin: -10px 20px -10px -10px !important;
+    width: 240px !important;
+
+    img {
+      height: 310px;
+    }
+  }
+}
+

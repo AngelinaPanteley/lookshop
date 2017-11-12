@@ -1,0 +1,93 @@
+@mixin stitches-sprite($x: 0, $y: 0, $width: 0, $height: 0) {
+  background-position: $x $y;
+  width: $width;
+  height: $height;
+}
+
+.sprite {
+  background-image: url(../images/spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+
+  &.sprite-card-1 {
+    @include stitches-sprite(-5px, -5px, 34px, 22px);
+  }
+
+  &.sprite-card-2 {
+    @include stitches-sprite(-49px, -5px, 34px, 22px);
+  }
+
+  &.sprite-card-3 {
+    @include stitches-sprite(-93px, -5px, 34px, 22px);
+  }
+
+  &.sprite-card-4 {
+    @include stitches-sprite(-137px, -5px, 34px, 22px);
+  }
+
+  &.sprite-card-5 {
+    @include stitches-sprite(-181px, -5px, 34px, 22px);
+  }
+
+  &.sprite-card-6 {
+    @include stitches-sprite(-226px, -5px, 34px, 22px);
+  }
+
+  &.sprite-card-7 {
+    @include stitches-sprite(-270px, -5px, 34px, 22px);
+  }
+
+  &.sprite-card-8 {
+    @include stitches-sprite(-314px, -5px, 34px, 22px);
+  }
+
+  &.sprite-card-9 {
+    @include stitches-sprite(-358px, -5px, 34px, 22px);
+  }
+
+  &.sprite-card-10 {
+    @include stitches-sprite(-402px, -5px, 35px, 22px);
+  }
+
+  &.sprite-card-11 {
+    @include stitches-sprite(-447px, -5px, 34px, 22px);
+  }
+
+  &.sprite-abbandon-ship-logo {
+    @include stitches-sprite(-5px, -37px, 51px, 57px);
+  }
+
+  &.sprite-addict-logo {
+    @include stitches-sprite(-66px, -37px, 83px, 31px);
+  }
+
+  &.sprite-adidas-logo {
+    @include stitches-sprite(-159px, -37px, 57px, 47px);
+  }
+
+  &.sprite-boy-london-logo {
+    @include stitches-sprite(-226px, -37px, 56px, 38px);
+  }
+
+  &.sprite-calvin-klein-logo {
+    @include stitches-sprite(-292px, -37px, 98px, 19px);
+  }
+
+  &.sprite-converse-logo {
+    @include stitches-sprite(-292px, -66px, 84px, 16px);
+  }
+
+  &.sprite-edwin-logo {
+    @include stitches-sprite(-400px, -37px, 69px, 22px);
+  }
+
+  &.sprite-grenson-logo {
+    @include stitches-sprite(-226px, -92px, 137px, 27px);
+  }
+
+  &.sprite-shop-icon {
+    @include stitches-sprite(-5px, -172px, 20px, 19px);
+  }
+}
+
+

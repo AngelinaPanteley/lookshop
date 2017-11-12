@@ -1,0 +1,47 @@
+.subfooter {
+  background-color: #000;
+  height: 74px;
+
+  .center-container {
+    @include flex();
+    height: 100%;
+  }
+
+  a,
+  p {
+    color: #8d8d8d;
+    font-size: 11px;
+  }
+
+  p {
+    line-height: 16px;
+    text-align: right;
+  }
+
+  a {
+    margin-right: 5px;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+      transition: color .2s;
+
+      &:after {
+        color: #8d8d8d;
+      }
+    }
+
+    &:after {
+      content: "|";
+      margin-left: 9px;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

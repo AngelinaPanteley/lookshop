@@ -1,0 +1,108 @@
+html {
+  color: $color-font-base;
+  font-family: $font-base;
+  font-size: 10px;
+  font-weight: normal;
+
+  @include media-md {
+    font-size: 7px;
+  }
+}
+
+a {
+  cursor: pointer;
+  transition: color .2s;
+}
+
+.heading {
+  @include flex(column);
+  left: calc(50% - 247px);
+  margin: 0;
+  position: absolute;
+  top: calc(50% - 21px);
+  transform: translate(-50%,-50%);
+
+  h1 {
+    @include flex(column);
+    color: $heading-color;
+    font-size: 3.6rem;
+    margin: 0;
+  }
+
+  .collection-name {
+    font-family: $luxury;
+    margin-bottom: .9rem;
+    position: relative;
+
+    &:before,
+    &:after {
+      background-color: $heading-color;
+      content: "";
+      height: 1px;
+      left: -8.0rem;
+      position: absolute;
+      top: calc(50% + .5rem);
+      transform: translateY(-50%);
+      width: 7.4rem;
+    }
+
+    &:after {
+      left: inherit;
+      right: -8.4rem;
+    }
+  }
+
+  .collection-gender {
+    display: block;
+    font-family: $helvetica-neue-LtCn;
+    margin-bottom: 1rem;
+    margin-top: 2.8rem;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:before,
+    &:after {
+      background-color: $heading-color;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: -1.2rem;
+      width: 100%;
+    }
+
+    &:after {
+      height: 4px;
+      top: -1.9rem;
+    }
+  }
+
+  button {
+    @include primary-button(15.5rem, 5.5rem, 1.6rem);
+    padding-right: 3.2rem;
+    padding-top: .2rem;
+
+    &:active {
+      @include primary-button-active();
+    }
+
+    i {
+      font-size: 1.2rem;
+      position: absolute;
+      right: 1.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include media-md {
+    left: calc(50% - 22vw);
+    top: calc(50% + 2px);
+
+    img {
+      width: 35.7rem;
+    }
+  }
+}

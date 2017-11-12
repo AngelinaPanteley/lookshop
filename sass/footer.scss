@@ -1,0 +1,107 @@
+.footer {
+  background-color: #ededed;
+  padding: 31px 0 33px;
+
+  @include media-md {
+    padding-bottom: 0px;
+  }
+
+  .center-container {
+    @include flex(row, space-between, flex-start);
+  }
+
+  &__container {
+    @include flex(row, flex-start, flex-start);
+    width: 30%;
+
+    @include media-md {
+      width: 45%;
+    }
+
+    &:first-child {
+      width: 70%;
+
+      @include media-md {
+        width: 55%;
+      }
+    }
+
+    &:last-child {
+      justify-content: space-around;
+
+      .footer__column {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  &__column {
+    margin-right: 57px;
+
+    @include media-md {
+      margin: 0 40px 37px 0;
+    }
+  }
+
+  h6 {
+    color: #544f4d;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  a {
+    color: #544f4d;
+    font-size: 12px;
+    line-height: 17px;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-base;
+      transition: color .2s;
+    }
+  }
+
+  &__social-list {
+    @include flex();
+    max-width: 125px;
+
+    li {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__social-link {
+    background-color: #4c4c4b;
+    border-radius: 50%;
+    display: inline-block;
+    height: 35px;
+    text-align: center;
+    width: 35px;
+
+    i {
+      color: #fff;
+      font-size: 20px;
+      line-height: 35px;
+    }
+
+    &:hover {
+      background-color: $color-base;
+    }
+  }
+}
+
+.secured {
+  @extend .sprite;
+  @include flex(column, center, center);
+  @include stitches-sprite(-373px, -92px, 107px, 107px);
+  color: #a59d9a;
+  font-family: 'Helvetica-Cn', $font-base;
+  font-size: 14px;
+  margin-top: 17px;
+
+  span:first-child {
+    font-family: $impact;
+    font-size: 30px;
+  }
+}

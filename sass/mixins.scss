@@ -1,0 +1,73 @@
+@mixin media-width-between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin media-width-above($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin media-width-below($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @include media-width-between($min-mobile, $max-mobile) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @include media-width-between($min-tablet, $max-tablet) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @include media-width-above($desktop) {
+    @content;
+  }
+}
+
+@mixin media-mob {
+  @include media-width-below($desktop) {
+    @content;
+  }
+}
+
+@mixin flex($direction: row, $justify: space-between, $align: center, $wrap: wrap) {
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+}
+
+@mixin primary-button($width: 120px, $height: 30px, $size: 14px) {
+  background: $color-base;
+  border: none;
+  box-shadow: 0 3px 0 0 #dd6b44;
+  color: #fff;
+  cursor: pointer;
+  font-family: $helvetica-neue-Th;
+  font-size: $size;
+  height: $height;
+  line-height: $height;
+  outline: none;
+  position: relative;
+  text-transform: uppercase;
+  transition: all .2s;
+  width: $width;
+}
+
+@mixin primary-button-active () {
+  box-shadow: none;
+  margin: 3px 0 -3px;
+  transition: all .2s;
+}
+

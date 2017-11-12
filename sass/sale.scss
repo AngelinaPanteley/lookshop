@@ -1,0 +1,74 @@
+.sale {
+  margin-bottom: 71px;
+
+  @include media-md {
+    margin-bottom: 45px;
+  }
+
+  &__heading {
+    @extend .sprite;
+    @include stitches-sprite(-492px, -5px, 157px, 157px);
+    color: #fff;
+    display: grid;
+    font-family: $empirial;
+    font-size: 36px;
+    grid-template-areas: 'clearance clearance' 'amount percent' 'amount off';
+    grid-template-columns: 56% 44%;
+    grid-template-rows: repeat(3, 33%);
+    margin: 23px auto;
+    padding: 32px 0px;
+    position: relative;
+    text-transform: uppercase;
+
+    span:first-child {
+      grid-area: clearance;
+      justify-self: center;
+    }
+
+    span:nth-child(3n) {
+      grid-area: percent;
+    }
+
+    span:last-child {
+      grid-area: off;
+    }
+
+    &:before,
+    &:after {
+      background-color: #d8d8d8;
+      content: "";
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      width: calc((100vw - 200px)/2);
+    }
+
+    &:before {
+      left: calc((177px - 100vw)/2);
+    }
+
+    &:after {
+      right: calc((177px - 100vw)/2);
+    }
+  }
+
+  &__amount {
+    font-size: 78px;
+    grid-area: amount;
+    justify-self: end;
+  }
+
+  &__products {
+    @include flex();
+    max-height: 395px;
+    overflow: hidden;
+
+    @include media-md {
+      justify-content: space-around;
+    }
+  }
+
+  .product {
+    background-color: #f7f7f7;
+  }
+}

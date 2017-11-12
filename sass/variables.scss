@@ -1,0 +1,22 @@
+$arial: 'Arial', sans-serif;
+$font-base: $arial;
+$empirial: 'Empirial', $font-base;
+$luxury: 'Luxury', $font-base;
+$bello: 'Bello', $font-base;
+$helvetica: 'Helvetica', $font-base;
+$impact: 'Impact', $font-base;
+$helvetica-neue-LtCn: 'Helvetica-LtCn', $font-base;
+$helvetica-neue-Th: 'Helvetica-Th', $font-base;
+
+$color-font-base: #999999; //light gray
+$color-font-secondary: #6b6b6b; //dark gray
+$color-base: #fd926d; //orange
+$color-secondary: #7ac9bd; //blue
+$color-h2: #414141;
+$heading-color: #78645d;
+
+$desktop: 1000px;
+$min-mobile: 320px;
+$max-mobile: 640px;
+$min-tablet: 640px;
+$max-tablet: 999px;

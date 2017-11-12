@@ -1,0 +1,53 @@
+.subheader {
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  .center-container {
+    @include flex();
+  }
+
+  &__menu {
+    @include flex();
+
+    & > a {
+      border-left: 1px solid #444444;
+      font-size: 11px;
+      max-height: 30px;
+      padding: 0 15px;
+
+      &:last-child {
+        border-right: 1px solid #444444;
+        padding: 0 4px;
+      }
+
+      &:first-child {
+        padding-right: 6px;
+      }
+
+      .icon-down-dir {
+        color: #c1c1c1;
+        font-size: 13px;
+        margin-left: 3px;
+      }
+
+      .icon-user {
+        color: #666666;
+        font-size: 13px;
+      }
+
+      .icon-search {
+        font-size: 19px;
+      }
+
+      &:hover,
+      &:hover > * {
+        color: $color-base;
+        transition: color .2s;
+      }
+    }
+  }
+}
